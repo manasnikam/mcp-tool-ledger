@@ -1,0 +1,23 @@
+{
+  "name": "mcp-tool-ledger",
+  "version": "0.1.0",
+  "description": "Record every MCP tool call (input hash, output summary, latency, ok) to any sink, with a libsql table and an MCP resource built in.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
+  "files": ["dist"],
+  "keywords": ["mcp", "model-context-protocol", "observability", "telemetry", "libsql", "sqlite"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --dir src"
+  },
+  "devDependencies": {
+    "@libsql/client": "^0.18.0",
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
